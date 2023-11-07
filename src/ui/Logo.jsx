@@ -14,7 +14,7 @@ function Logo() {
 	// Point: DarkMode Implemented
 	const { isDarkMode } = useDarkMode();
 
-	const src = isDarkMode ? '/logo-dark.png' : '/logo-light.png';
+	const src = isDarkMode ? '/book-now-dark.png' : '/book-now-light.png';
 
 	return (
 		<StyledLogo>
