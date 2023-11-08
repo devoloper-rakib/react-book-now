@@ -107,6 +107,7 @@ export async function getStaysTodayActivity() {
 	return data;
 }
 
+// Point: updated Bookings
 export async function updateBooking(id, obj) {
 	const { data, error } = await supabase
 		.from('bookings')
@@ -130,5 +131,20 @@ export async function deleteBooking(id) {
 		console.error(error);
 		throw new Error('Booking could not be deleted');
 	}
+	return data;
+}
+
+// Point: create a new Booking object
+
+export async function createBooking(bookingData) {
+	const { data, error } = await supabase.from('bookings').upsert([bookingData]);
+
+	console.log(data);
+
+	if (error) {
+		console.error(error);
+		throw new Error('Booking could not be created');
+	}
+
 	return data;
 }
