@@ -44,9 +44,7 @@ function CreateBookingForm({ bookingToUpdate = {}, onCloseModal }) {
 		}
 	}
 
-	function onError(errors) {
-		console.log(errors);
-	}
+	function onError(errors) {}
 
 	return (
 		<Form
@@ -56,7 +54,7 @@ function CreateBookingForm({ bookingToUpdate = {}, onCloseModal }) {
 			<FormRow label='Start Date' error={errors?.startDate?.message}>
 				<Input
 					disabled={isWorking}
-					type='datetime-local'
+					type='date'
 					id='startDate'
 					{...register('startDate', {
 						required: 'This field is required',
@@ -64,10 +62,10 @@ function CreateBookingForm({ bookingToUpdate = {}, onCloseModal }) {
 				/>
 			</FormRow>
 
-			<FormRow label='End Date' error={errors?.startDate?.message}>
+			<FormRow label='End Date' error={errors?.endDate?.message}>
 				<Input
 					disabled={isWorking}
-					type='datetime-local'
+					type='date'
 					id='endDate'
 					{...register('endDate', {
 						required: 'This field is required',
@@ -148,6 +146,9 @@ function CreateBookingForm({ bookingToUpdate = {}, onCloseModal }) {
 					})}
 				/>
 			</FormRow>
+
+			{/* Include other existing form fields as well in the form */}
+			{/* ... (other fields) ... */}
 
 			<FormRow>
 				<Button
