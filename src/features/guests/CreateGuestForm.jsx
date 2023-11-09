@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 
-import { useCountries } from 'hooks/useCountries';
+import { useCountries } from '../../hooks/useCountries';
 import { useCreateGuest } from 'features/guests/useCreateGuest';
 import Spinner from 'ui/Spinner';
 import Form from 'ui/Form';

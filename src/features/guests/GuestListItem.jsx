@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Flag } from 'ui/Flag';
+import { Flag } from '../../ui/Flag';
 
 const StyledGuestListItem = styled.li`
 	display: grid;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { useGuests } from 'features/guests/useGuests';
-import Pagination from 'ui/Pagination';
-import Spinner from 'ui/Spinner';
+import { useGuests } from './useGuests';
+import Pagination from '../../ui/Pagination';
+import Spinner from '../../ui/Spinner';
 import GuestListItem from './GuestListItem';
 
 const StyledGuestList = styled.div`
